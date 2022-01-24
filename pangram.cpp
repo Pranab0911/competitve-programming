@@ -5,13 +5,24 @@ int n;
 cin>>n;
 string s;
 cin>>s;
-bool flag=0;
+int c[26]={0};
 for(int i=0;i<n;i++){
-    if(s[i]>='A'&& s[i]<='Z'){
-        flag=1;
+if(s[i]<97){
+    s[i]+=32;
+    c[s[i]-'a']+=1;
+}
+else{
+    c[s[i]-'a']+=1;
+}
+}
+for(int i=0;i<26;i++){
+    if(c[i]==0){
+        cout<<"NO";
+        return 0;
     }
 }
-if(flag==1) cout<<"YES"<<endl;
-else cout<<"NO"<<endl;
+cout<<"YES"<<endl;
 return 0;
 }
+
+
