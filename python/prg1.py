@@ -1,0 +1,7 @@
+num1= int(input('Enter first num '))
+num2 = int(input('Enter second num'))
+print("Sum of num1 and num2 ",num1+num2)
+print("Subtraction of num1 and num 2",num1- num2)
+print("Multiplication of num1 and num 2",num1*num2)
+print("Division of num1 and num 2",num1/ num2)
+print("Pranab ")
