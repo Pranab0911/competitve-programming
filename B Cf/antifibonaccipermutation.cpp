@@ -3,31 +3,38 @@ using namespace std;
 int main(){
 int t;
 cin>>t;
-while(t--){
-    int n;
-    cin>>n;
-    if(n==3){
-        cout<<3<<" "<<2<<" "<<1<<endl;
-        cout<<1<<" "<<3<<" "<<2<<endl;
-        cout<<3<<" "<<1<<" "<<2<<endl;
-    }
-    else{
-        vector<int> v;
-        for(int i=n;i>0;i++){
-            v.push_back(i);
+while(t--)
+{
 
-        }
-        for(int i=0;i<n;i++){
-            int temp =  v[0];
-            for(int j=1;j<n;j++){
-                v[j-1]=v[j];
-                cout<<v[j-1]<<" ";
-            }
-            v[n-1]=temp;
-            cout<<temp;
-            cout<<endl;
-        }
+    int n,i=0;
+    cin>>n;
+    vector<int> v;
+    for(int i=1;i<=n;i++)
+    {
+        v.push_back(i);
     }
+    reverse(v.begin(),v.end());
+     for(auto it : v)
+     {
+         cout<<it<<" ";
+         
+     }
+cout<<endl;
+     n--;
+     while(n--)
+     {
+         swap(v[i],v[i+1]);
+         for(auto it : v)
+         {
+             cout<<it<<" ";
+         }
+             cout<<endl;
+
+         swap(v[i],v[i+1]);
+         i++;
+
+     }
+
 }
 return 0;
 }
