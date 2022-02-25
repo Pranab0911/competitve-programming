@@ -9,7 +9,8 @@ while(t--){
     if((n+1)/2 <k){
         cout<<"-1\n";
         continue;
-    }
+    }dsv.
+    svsbsbsb 
     vector<string> s(n,string(n,'.'));
     for(int i=0;i<k;i++)
         s[2*i][2*i]='R';
