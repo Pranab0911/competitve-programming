@@ -68,11 +68,16 @@ ll lcm(ll a,ll b){if(a==0||b==0)return 0;return (a*b)/__gcd(a,b);}
  *   *****************/
 void solve(){
 
-int n,m,i,j;
-
-cin>>n>>m>>i>>j;
-
-cout<<1<<" "<<1<<" "<<n<<" "<<m<<nline;
+ ll a,b;
+        cin >> a >> b;
+        if(a==b)
+            cout << 0 << " " << 0 << '\n';
+        else
+        {
+            ll g = abs(a-b);
+            ll m = min(a%g,g-a%g);
+            cout << g << " " << m << '\n';
+        }
 
 
 }
@@ -83,10 +88,11 @@ cout<<1<<" "<<1<<" "<<n<<" "<<m<<nline;
 int main(){
 int t;
 cin>>t;
-for(int i=0;i<t;i++){
-    //ll google=solve();
-    //cout<<"Case #"<<i+1<<": "<<google<<endl;
+//int i=1;   
+while(t--){
+ //      cout<<"Case #"<<i<<": ";
     solve();
+   // i++;
 }
 return 0;
 }

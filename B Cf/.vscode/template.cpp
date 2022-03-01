@@ -79,8 +79,11 @@ void solve(){
 int main(){
 int t;
 cin>>t;
+//int i=1;   
 while(t--){
+ //      cout<<"Case #"<<i<<": ";
     solve();
+   // i++;
 }
 return 0;
 }
