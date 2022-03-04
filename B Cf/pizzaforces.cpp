@@ -26,8 +26,6 @@ using namespace std;
 #define ft first
 #define pb push_back
 #define ppb pop_back
-#define ys cout<<"YES"<<endl
-#define no cout<<"NO"<<endl
 #define mod 998244353 
 const ll INF=1e18;
 ////////////////////////important  functions//////////////////////////////////
@@ -63,30 +61,37 @@ return true;
 ll lcm(ll a,ll b){if(a==0||b==0)return 0;return (a*b)/__gcd(a,b);}
 
 /********************
- * * * * * * * * * * 
+ * * * * * * * * * * 4041-2020=2021
  *  * ** * * ** * * *
  * C O D E
  *  ******* * ** * * *
  *   *****************/
 void solve(){
+ll n;
+cin>>n;
+ll x=n/6;
+ll y=n%6;
+if(n<=6){
+    cout<<"15"<<nline;
+}
+else if(y==0)
+{
+    cout<<x*15<<nline;
+}
+else if (y<=2)
+{
+cout<<(x*15)+5<<nline;
+}
+else if(y<=4){
+    cout<<(x*15)+10<<nline;
+}
+else{
+    x++;
+    cout<<x*15<<endl;
+}
 
-int x,y;
-cin>>x>>y;
-    if (x > 3) {
-        cout << "YES" << endl;
 
-    } else if (x == 1) {
-        if (y == 1)
-            ys;
-        else
-            no;
 
-    } else {
-        if (y <= 3)
-            ys;
-        else
-            no;
-    }
 }
 
 

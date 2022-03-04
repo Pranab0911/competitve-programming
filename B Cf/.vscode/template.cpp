@@ -26,6 +26,8 @@ using namespace std;
 #define ft first
 #define pb push_back
 #define ppb pop_back
+#define ys cout<<"YES"<<endl
+#define no cout<<"NO"<<endl
 #define mod 998244353 
 const ll INF=1e18;
 ////////////////////////important  functions//////////////////////////////////

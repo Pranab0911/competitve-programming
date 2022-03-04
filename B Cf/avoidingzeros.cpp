@@ -26,8 +26,6 @@ using namespace std;
 #define ft first
 #define pb push_back
 #define ppb pop_back
-#define ys cout<<"YES"<<endl
-#define no cout<<"NO"<<endl
 #define mod 998244353 
 const ll INF=1e18;
 ////////////////////////important  functions//////////////////////////////////
@@ -70,23 +68,21 @@ ll lcm(ll a,ll b){if(a==0||b==0)return 0;return (a*b)/__gcd(a,b);}
  *   *****************/
 void solve(){
 
-int x,y;
-cin>>x>>y;
-    if (x > 3) {
-        cout << "YES" << endl;
+  int N;
+        cin >> N;
+        vector<int> a(N);
+        int sum = 0;
+        for (int i = 0; i < N; i++) cin >> a[i], sum += a[i];
+        if (sum == 0) {
+            cout << "NO\n";
+        }
+        cout << "YES\n";
+ 
+        sort(a.begin(), a.end());
+        if (sum > 0) reverse(a.begin(), a.end());
+        for (int x: a) cout << x << " ";
+        cout << "\n";
 
-    } else if (x == 1) {
-        if (y == 1)
-            ys;
-        else
-            no;
-
-    } else {
-        if (y <= 3)
-            ys;
-        else
-            no;
-    }
 }
 
 

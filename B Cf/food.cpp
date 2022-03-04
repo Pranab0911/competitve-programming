@@ -70,23 +70,15 @@ ll lcm(ll a,ll b){if(a==0||b==0)return 0;return (a*b)/__gcd(a,b);}
  *   *****************/
 void solve(){
 
-int x,y;
-cin>>x>>y;
-    if (x > 3) {
-        cout << "YES" << endl;
 
-    } else if (x == 1) {
-        if (y == 1)
-            ys;
-        else
-            no;
 
-    } else {
-        if (y <= 3)
-            ys;
-        else
-            no;
-    }
+int n,k;
+cin>>n>>k;
+  for(int i = 0; i < n; i++){
+     for(int j = 1 ; j < k; j++){
+        cout << (i + j ) << endl;
+      }
+  }
 }
 
 
